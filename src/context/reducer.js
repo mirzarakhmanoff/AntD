@@ -66,7 +66,7 @@ export const reducer = (state, action) => {
       saveStorege(memory);
       return memory;
     case "LOGOUT":
-      memory = { ...state, token: null };
+      memory = { ...state, token: null, wishlist: null };
       saveStorege(memory);
       return memory;
     default:
