@@ -8,7 +8,6 @@ const { Meta } = Card;
 const Products = ({ data, loading }) => {
   const [liked, setLiked] = useState({});
   const [state, dispatch] = useStateValue();
-  console.log(state.wishlist);
 
   return (
     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

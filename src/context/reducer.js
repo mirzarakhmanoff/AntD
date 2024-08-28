@@ -8,7 +8,7 @@ export const reducer = (state, action) => {
   let memory = {};
   switch (action.type) {
     case "TOGGLE_WISHLIST":
-      let index = state.wishlist.findIndex(
+      let index = state.wishlist?.findIndex(
         (item) => item.id === action.payload.id
       );
       if (index < 0) {
@@ -18,7 +18,7 @@ export const reducer = (state, action) => {
       } else {
         memory = {
           ...state,
-          wishlist: state.wishlist.filter(
+          wishlist: state.wishlist?.filter(
             (item) => item.id !== action.payload.id
           ),
         };
